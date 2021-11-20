@@ -1,3 +1,5 @@
+![til](./rock-paper-scissors-show.gif)
+
 To run this project you'll need the following requirements:
 
 
@@ -8,13 +10,20 @@ To run this project you'll need the following requirements:
 - 2 resistors
 - jumpers
 
-To run the software, run:
+to run the arduino project, simply upload it to your arduino and run the python project
+
+-ATENTION-
+you NEED to use the digital ports 8 and 9 on your arduino
+				respectively friendly and enemy
+
+*Software*:
 
 
 $~ pip install -r docs/requirements.txt
+
 $~ python rock-paper-scissors.py
 
+TO MAKE ENEMY MOVE: PRESS 'P' ON KEYBOARD
 
-If you're using a external webcam, set the value in line 35 to 1.
 
 

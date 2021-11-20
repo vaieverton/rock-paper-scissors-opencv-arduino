@@ -5,6 +5,15 @@ import serial
 import handTrackingModule as htm
 import random
 
+
+'''
+    You will set your machine settings here:
+'''
+port = '/dev/ttyACM0'
+rate = 115200
+web_cam_input = 0 # internal - 0 | external - 1
+
+
 def getNumber(ar):
     s=""
     for i in ar:
@@ -23,7 +32,8 @@ def getNumber(ar):
     elif(s=="11111"):
         return(5)    
 
-arduino = serial.Serial(port='/dev/ttyACM0', baudrate=115200, timeout=.1)
+arduino = serial.Serial(port=port, baudrate=rate, timeout=.1)
+
 
 def write_read(x):
     arduino.write(bytes(x, 'utf-8'))
@@ -32,7 +42,7 @@ def write_read(x):
     # return data
 
 wcam,hcam=640,480
-cap=cv2.VideoCapture(0)
+cap=cv2.VideoCapture(web_cam_input)
 cap.set(3,wcam)
 cap.set(4,hcam)
 pTime=0
