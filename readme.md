@@ -1,4 +1,6 @@
 To run this project you'll need the following requirements:
+
+
 *Hardware*:
 - Arduino
 - Webcam (internal or external)
@@ -7,6 +9,8 @@ To run this project you'll need the following requirements:
 - jumpers
 
 To run the software, run:
+
+
 $~ pip install -r docs/requirements.txt
 $~ python rock-paper-scissors.py
 
